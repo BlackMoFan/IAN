@@ -6,7 +6,7 @@ const EvaluatePart= () => {
 
     return (
         <div className="grid justify-center h-screen grid-cols-12 gap-6 p-4 px-5 bg-white lg:px-48 flex-center place-items-center">
-            <div className="grid w-full h-full col-span-12 p-4 text-center lg:h-5/6 bg-input-area place-items-center position-items-center text-input-area-text lg:col-span-8 rounded-2xl">
+            <div className="grid w-full h-full col-span-12 p-4 text-center mb-9 lg:h-full bg-input-area place-items-center text-input-area-text lg:col-span-7 rounded-2xl">
                 <div className="h-64 bg-white rounded-2xl w-80 place-items-center">
                     <BiError className="w-32 h-32 mx-auto text-yellow"/>
                     <h3 className="font-bold">Check Input Image</h3>
@@ -18,7 +18,7 @@ const EvaluatePart= () => {
                     alt=""
                 /> */}
             </div>
-            <div className="h-full col-span-12 p-3 text-black lg:h-5/6 lg:col-span-4 rounded-2xl place-content-center">
+            <div className="h-full col-span-12 p-3 text-black lg:h-[100vh] lg:col-span-5 rounded-2xl place-content-center">
                 <div className="flex flex-row gap-6 my-6 place-items-center">
                     <svg fill="#9F8FB4" className="w-20 h-20" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 94">
                     <g>
@@ -38,11 +38,11 @@ const EvaluatePart= () => {
                 <h1 className="text-4xl font-bold my-9">Results</h1>
                 <div className="grid grid-cols-6 text-sm lg:text-base">
                     <div className="grid col-span-4 ">
-                        <p className="my-3 lg:my-5">M3-MC relation:</p>
-                        <p className="my-3 lg:my-5">Position:</p>
-                        <p className="my-3 lg:my-5">Distance of IAN to M3:</p>
-                        <p className="my-3 lg:my-5">Interruption of Corticalization:</p>
-                        <p className="my-3 lg:my-5">Risk of nerve injury:</p>
+                        <p className="my-2 lg:my-3">M3-MC relation:</p>
+                        <p className="my-2 lg:my-3">Position:</p>
+                        <p className="my-2 lg:my-3">Distance of IAN to M3:</p>
+                        <p className="my-2 lg:my-3">Interruption of Corticalization:</p>
+                        <p className="my-2 lg:my-3">Risk of nerve injury:</p>
                     </div>
                     <div className="grid col-span-2 font-bold ">
                         {/* <p className="my-3 lg:my-5">Class 1A</p>

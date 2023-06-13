@@ -5,7 +5,7 @@ const EvaluatePart= () => {
 
     return (
         <div className="grid justify-center h-screen grid-cols-12 gap-6 p-4 px-5 bg-white lg:px-48 flex-center place-items-center">
-            <div className="grid w-full h-full col-span-12 p-4 text-center lg:h-[100vh] bg-input-area place-items-center text-input-area-text lg:col-span-7 rounded-2xl">
+            <div className="grid w-full h-full col-span-12 p-4 text-center mb-9 lg:h-full bg-input-area place-items-center text-input-area-text lg:col-span-7 rounded-2xl">
                 <img 
                     className="w-full max-w-xl transition rounded-md max-h-fit hover:border-gray-400 focus:outline-none"
                     src="/classified2.png" 
@@ -32,23 +32,23 @@ const EvaluatePart= () => {
                 <h1 className="text-4xl font-bold my-9">Results</h1>
                 <div className="grid grid-cols-6 text-sm lg:text-base">
                     <div className="grid col-span-4 ">
-                        <p className="my-3 lg:my-5">M3-MC relation:</p>
-                        <p className="my-3 lg:my-5">Position:</p>
-                        <p className="my-3 lg:my-5">Distance of IAN to M3:</p>
-                        <p className="my-3 lg:my-5">Interruption of Corticalization:</p>
-                        <p className="my-3 lg:my-5">Risk of nerve injury:</p>
+                        <p className="my-2 lg:my-3">M3-MC relation:</p>
+                        <p className="my-2 lg:my-3">Position:</p>
+                        <p className="my-2 lg:my-3">Distance of IAN to M3:</p>
+                        <p className="my-2 lg:my-3">Interruption of Corticalization:</p>
+                        <p className="my-2 lg:my-3">Risk of nerve injury:</p>
                     </div>
                     <div className="grid col-span-2 font-bold ">
-                        <p className="my-3 lg:my-5">Class 1A</p>
-                        <p className="my-3 lg:my-5">Buccal</p>
-                        <p className="my-3 lg:my-5">1.8 mm</p>
-                        <p className="my-3 lg:my-5">False</p>
-                        <p className="my-3 lg:my-5">N.1 Low</p>
+                        <p className="my-2 lg:my-3">Class 1A</p>
+                        <p className="my-2 lg:my-3">Buccal</p>
+                        <p className="my-2 lg:my-3">1.8 mm</p>
+                        <p className="my-2 lg:my-3">False</p>
+                        <p className="my-2 lg:my-3">N.1 Low</p>
                     </div>
                 </div>
                 <Link href="/">
                     <button
-                        className="z-30 flex gap-6 p-3 mx-auto font-bold text-center text-black rounded mt-9 w-60 bg-button-color"
+                        className="z-30 flex gap-6 p-3 mx-auto font-bold text-center text-white border-2 rounded mt-9 w-60 bg-button-color hover:bg-white hover:border-button-color hover:text-button-color"
                     >
                         {/* {uploading ? "Uploading.." : "Upload"} */}
                         {/* {uploading ? "Uploading.." : "Upload"} */}

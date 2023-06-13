@@ -1,13 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
 import { useDropzone } from 'react-dropzone';
-import {useCallback} from 'react';
+import { useCallback } from 'react';
 import Link from "next/link";
 // import { redirect } from 'next/navigation';
 import { useRouter } from 'next/router';
 // import Router from 'next/router';
 
-const MainPart= () => {
+const MainPart = () => {
     const [uploading, setUploading] = useState(false);
     const [selectedImage, setSelectedImage] = useState("");
     const [selectedFile, setSelectedFile] = useState<File>();
@@ -16,7 +16,7 @@ const MainPart= () => {
     const onDrop = useCallback(acceptedFiles => {
         acceptedFiles.forEach((file) => {
             const reader = new FileReader()
-      
+
             reader.onabort = () => console.log('file reading was aborted')
             reader.onerror = () => {
                 console.log('file reading has failed');
@@ -27,18 +27,18 @@ const MainPart= () => {
                 // router.push('/new-page');
             }
             reader.onload = () => {
-            // Do whatever you want with the file contents
+                // Do whatever you want with the file contents
                 const currentFile = file;
                 setSelectedImage(URL.createObjectURL(currentFile));
                 setSelectedFile(currentFile);
-              const binaryStr = reader.result
-              console.log(binaryStr)
+                const binaryStr = reader.result
+                console.log(binaryStr)
             }
             reader.readAsArrayBuffer(file)
-          })
-      }, [])
+        })
+    }, [])
 
-    const{getRootProps, getInputProps, isDragActive, isDragReject} = useDropzone({
+    const { getRootProps, getInputProps, isDragActive, isDragReject } = useDropzone({
         accept: {
             'image/*': ['.jpeg', '.jpg', '.png']
         },
@@ -48,7 +48,7 @@ const MainPart= () => {
     const handleUpload = async () => {
         setUploading(true);
         try {
-            if(!selectedFile) return;
+            if (!selectedFile) return;
             const formData = new FormData();
             formData.append("myImage", selectedFile);
             const { data } = await axios.post("/api/image", formData);
@@ -61,41 +61,41 @@ const MainPart= () => {
     }
 
     // ERROR HANDLING
-    if(isDragReject) router.push('/ErrorPage');
+    if (isDragReject) router.push('/ErrorPage');
 
     return (
         <div className="grid justify-center h-screen grid-cols-12 gap-6 px-5 bg-white lg:px-48 flex-center place-items-center">
             <div className="grid w-full col-span-12 p-4 text-center bg-white place-items-center h-5/6 text-input-area-text lg:col-span-8 rounded-2xl">
-                <div className="z-10 max-w-xl p-3 border-2 border-gray-300 border-dashed h-fit rounded-2xl w-80 place-content-center bg-input-area" {...getRootProps()}>
+                <div className="z-10 max-w-xl p-3 border-2 border-gray-300 border-dashed h-fit lg:h-full items-center lg:w-[40vw] rounded-2xl w-80 place-content-center bg-input-area" {...getRootProps()}>
                     {/* {isDragReject && (router.push('/ErrorPage'););
                         // redirect('../pages/ErrorPage')
                         )} */}
-                        {/* // (Router.push('/ErrorPage'))
+                    {/* // (Router.push('/ErrorPage'))
                         // redirect('/ErrorPage')
                          */}
-                        
-                    
-                {selectedImage ? (
-                    // {selectedImage.map((upFile) => {
-                    //     return (
-                    //         <img 
-                    //             className="flex justify-center w-full transition rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none"
-                    //             src={upFile.preview} 
-                    //             alt="preview" 
-                    //         />
-                    //     )
-                    // })}
-                    
-                    <img 
-                        className="w-full max-w-xl transition rounded-md max-h-fit hover:border-gray-400 focus:outline-none"
-                        src={selectedImage} 
-                        alt="" 
-                    />
-                ) : !isDragActive ? (
-                    <>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-24 h-24 mx-auto text-gray-600" fill="#929292" version="1.1" id="Capa_1" 
-                            viewBox="0 0 490.955 490.955">
-                            <path id="XMLID_448_" d="M445.767,308.42l-53.374-76.49v-20.656v-11.366V97.241c0-6.669-2.604-12.94-7.318-17.645L312.787,7.301
+
+
+                    {selectedImage ? (
+                        // {selectedImage.map((upFile) => {
+                        //     return (
+                        //         <img 
+                        //             className="flex justify-center w-full transition rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none"
+                        //             src={upFile.preview} 
+                        //             alt="preview" 
+                        //         />
+                        //     )
+                        // })}
+
+                        <img
+                            className="w-full max-w-xl transition rounded-md max-h-fit hover:border-gray-400 focus:outline-none"
+                            src={selectedImage}
+                            alt=""
+                        />
+                    ) : !isDragActive ? (
+                        <>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-24 h-24 mx-auto text-gray-600 my-14" fill="#929292" version="1.1" id="Capa_1"
+                                viewBox="0 0 490.955 490.955">
+                                <path id="XMLID_448_" d="M445.767,308.42l-53.374-76.49v-20.656v-11.366V97.241c0-6.669-2.604-12.94-7.318-17.645L312.787,7.301
                                 C308.073,2.588,301.796,0,295.149,0H77.597C54.161,0,35.103,19.066,35.103,42.494V425.68c0,23.427,19.059,42.494,42.494,42.494
                                 h159.307h39.714c1.902,2.54,3.915,5,6.232,7.205c10.033,9.593,23.547,15.576,38.501,15.576c26.935,0-1.247,0,34.363,0
                                 c14.936,0,28.483-5.982,38.517-15.576c11.693-11.159,17.348-25.825,17.348-40.29v-40.06c16.216-3.418,30.114-13.866,37.91-28.811
@@ -106,39 +106,39 @@ const MainPart= () => {
                                 c-6.423,0-11.662-5.225-11.662-11.662v-83.048h-32.574h-0.016c-4.346,0-8.308-2.405-10.336-6.271
                                 c-2.012-3.866-1.725-8.49,0.783-12.07l61.424-88.064c2.189-3.123,5.769-4.984,9.57-4.984h0.017c3.802,0,7.38,1.861,9.568,4.984
                                 l61.427,88.064C412.04,337.28,412.328,341.905,410.316,345.771z"/>
-                        </svg>
-                        <label
-                            className="z-10 flex justify-center w-full h-32 px-4 transition rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
-                                
+                            </svg>
+                            <label
+                                className="z-10 flex justify-center w-full h-32 px-4 transition rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
+
                                 <span className="flex items-center space-x-2">
-                                
+
                                     <span className="font-medium text-gray-600">
                                         Drag & drop to upload the CBCT M3 Axial slice image or
-                                    <span className="ml-2 cursor-pointer text-blue hover:underline">browse</span>
+                                        <span className="ml-2 cursor-pointer text-blue hover:underline">browse</span>
                                     </span>
-                            </span>
-                        </label>
-                        <input
-                            {...getInputProps()} 
-                            type="file" 
-                            name="file_upload" 
-                            className="z-10 hidden"
-                            accept=".jpg, .jpeg, .png"
-                            onChange={({ target }) => {
-                                if (target.files) {
-                                    const file = target.files[0];
-                                    setSelectedImage(URL.createObjectURL(file));
-                                    setSelectedFile(file);
-                                }
-                            }}
-                        />
-                    </>
-                ) :
-                (
-                    <>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-24 h-24 mx-auto text-gray-600" fill="#929292" version="1.1" id="Capa_1" 
-                            viewBox="0 0 490.955 490.955">
-                            <path id="XMLID_448_" d="M445.767,308.42l-53.374-76.49v-20.656v-11.366V97.241c0-6.669-2.604-12.94-7.318-17.645L312.787,7.301
+                                </span>
+                            </label>
+                            <input
+                                {...getInputProps()}
+                                type="file"
+                                name="file_upload"
+                                className="z-10 hidden"
+                                accept=".jpg, .jpeg, .png"
+                                onChange={({ target }) => {
+                                    if (target.files) {
+                                        const file = target.files[0];
+                                        setSelectedImage(URL.createObjectURL(file));
+                                        setSelectedFile(file);
+                                    }
+                                }}
+                            />
+                        </>
+                    ) :
+                        (
+                            <>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-24 h-24 mx-auto text-gray-600" fill="#929292" version="1.1" id="Capa_1"
+                                    viewBox="0 0 490.955 490.955">
+                                    <path id="XMLID_448_" d="M445.767,308.42l-53.374-76.49v-20.656v-11.366V97.241c0-6.669-2.604-12.94-7.318-17.645L312.787,7.301
                                 C308.073,2.588,301.796,0,295.149,0H77.597C54.161,0,35.103,19.066,35.103,42.494V425.68c0,23.427,19.059,42.494,42.494,42.494
                                 h159.307h39.714c1.902,2.54,3.915,5,6.232,7.205c10.033,9.593,23.547,15.576,38.501,15.576c26.935,0-1.247,0,34.363,0
                                 c14.936,0,28.483-5.982,38.517-15.576c11.693-11.159,17.348-25.825,17.348-40.29v-40.06c16.216-3.418,30.114-13.866,37.91-28.811
@@ -149,72 +149,72 @@ const MainPart= () => {
                                 c-6.423,0-11.662-5.225-11.662-11.662v-83.048h-32.574h-0.016c-4.346,0-8.308-2.405-10.336-6.271
                                 c-2.012-3.866-1.725-8.49,0.783-12.07l61.424-88.064c2.189-3.123,5.769-4.984,9.57-4.984h0.017c3.802,0,7.38,1.861,9.568,4.984
                                 l61.427,88.064C412.04,337.28,412.328,341.905,410.316,345.771z"/>
-                        </svg>
-                        <label
-                            className="z-10 flex justify-center w-full h-32 px-4 transition rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
-                                
-                                <span className="flex items-center space-x-2">
-                                
-                                    <span className="font-medium text-gray-600">
-                                        Drag & drop to upload the CBCT M3 Axial slice image here.
+                                </svg>
+                                <label
+                                    className="z-10 flex justify-center w-full h-32 px-4 transition rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
+
+                                    <span className="flex items-center space-x-2">
+
+                                        <span className="font-medium text-gray-600">
+                                            Drag & drop to upload the CBCT M3 Axial slice image here.
+                                        </span>
                                     </span>
-                            </span>
-                        </label>
-                        <input
-                            {...getInputProps()} 
-                            type="file" 
-                            name="file_upload" 
-                            className="z-10 hidden"
-                            accept=".jpg, .jpeg, .png"
-                            onChange={({ target }) => {
-                                if (target.files) {
-                                    const file = target.files[0];
-                                    setSelectedImage(URL.createObjectURL(file));
-                                    setSelectedFile(file);
-                                }
-                            }}
-                        />
-                    </>
-                )}
-                    
-                
+                                </label>
+                                <input
+                                    {...getInputProps()}
+                                    type="file"
+                                    name="file_upload"
+                                    className="z-10 hidden"
+                                    accept=".jpg, .jpeg, .png"
+                                    onChange={({ target }) => {
+                                        if (target.files) {
+                                            const file = target.files[0];
+                                            setSelectedImage(URL.createObjectURL(file));
+                                            setSelectedFile(file);
+                                        }
+                                    }}
+                                />
+                            </>
+                        )}
+
+
                 </div>
-                {selectedImage ? (     
+                {selectedImage ? (
                     // <Link href={{ pathname: '../pages/EvaluatePage', query: { keyword: 'source freeze' } }}>
                     <Link href="/EvaluatePage">
                         <button
                             onClick={handleUpload}
                             disabled={uploading}
                             style={{ opacity: uploading ? ".5" : "1" }}
-                            className="z-30 w-32 p-3 mt-3 text-xs font-bold text-center text-black rounded bg-button-color"
+                            className="z-30 w-32 p-3 mt-3 text-xs font-bold text-center text-white border-2 rounded bg-button-color hover:bg-white hover:border-button-color hover:text-button-color"
                         >
                             {!selectedImage ? "Upload another image" : "Upload"}
-                            
+
                         </button>
                     </Link>
-                    
+
                 ) : (
                     <Link href="/EvaluatePage">
                         <button
                             disabled={uploading}
                             style={{ opacity: uploading ? ".5" : "1" }}
-                            className="z-30 w-32 p-3 mt-3 font-bold text-center text-black rounded bg-button-color"
+                            className="z-30 w-32 p-3 mt-3 font-bold text-center text-white border-2 rounded bg-button-color hover:bg-white hover:border-button-color hover:text-button-color"
                         >
                             {/* {uploading ? "Uploading.." : "Upload"} */}
                             {uploading ? "Uploading.." : "Upload"}
                         </button>
                     </Link>
-                    
+
                 )}
             </div>
             <div className="col-span-12 text-center lg:col-span-4 rounded-2xl h-5/6 place-content-center">
                 <h2 className="mb-10 text-2xl font-bold text-heading-color">Mandibular Third Molar (M3) Nerve Injury Risk Evaluator</h2>
                 <p className="text-sm">You can try these sample cases:</p>
                 <Link href="/EvaluatePage">
-                    <img 
+                    <img
                         className="w-full max-w-xl transition rounded-md max-h-fit hover:border-gray-400 focus:outline-none"
-                        src="/sample.png" 
-                        alt="" 
+                        src="/sample.png"
+                        alt=""
                     />
                 </Link>
             </div>
