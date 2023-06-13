@@ -4,7 +4,7 @@ import EvaluatePart from "./utilities/EvaluatePart";
 
 export default function EvaluatePage()  {
   return (
-    <div className="bg-white">
+    <div className="bg-white h-[100vh]">
       <NavBar />
       <EvaluatePart />
       {/* <NavBar /> */}
