@@ -64,9 +64,9 @@ const MainPart = () => {
     if (isDragReject) router.push('/ErrorPage');
 
     return (
-        <div className="grid justify-center h-screen grid-cols-12 gap-6 px-5 bg-white lg:px-48 flex-center place-items-center">
-            <div className="grid w-full col-span-12 p-4 text-center bg-white place-items-center h-5/6 text-input-area-text lg:col-span-8 rounded-2xl">
-                <div className="z-10 max-w-xl p-3 border-2 border-gray-300 border-dashed h-fit lg:h-full items-center lg:w-[40vw] rounded-2xl w-80 place-content-center bg-input-area" {...getRootProps()}>
+        <div className="grid justify-center h-full grid-cols-12 gap-6 px-5 bg-white lg:px-48 flex-center place-items-center">
+            <div className="grid w-full h-full col-span-12 p-4 text-center bg-white lg:w-fit gap-9 lg:gap-12 place-items-center lg:h-2/6 text-input-area-text lg:col-span-8 rounded-2xl">
+                <div className="z-10 max-w-xl p-3 border-4 border-gray-300 border-dashed h-fit lg:h-full items-center lg:w-[30vw] rounded-2xl w-80 place-content-center bg-input-area" {...getRootProps()}>
                     {/* {isDragReject && (router.push('/ErrorPage'););
                         // redirect('../pages/ErrorPage')
                         )} */}
@@ -108,11 +108,11 @@ const MainPart = () => {
                                 l61.427,88.064C412.04,337.28,412.328,341.905,410.316,345.771z"/>
                             </svg>
                             <label
-                                className="z-10 flex justify-center w-full h-32 px-4 transition rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
+                                className="z-10 flex justify-center h-2 p-4 px-6 mb-4 transition rounded-md appearance-none cursor-pointer w-fit hover:border-gray-400 focus:outline-none">
 
                                 <span className="flex items-center space-x-2">
 
-                                    <span className="font-medium text-gray-600">
+                                    <span className="font-medium text-gray-600 lg:text-xl">
                                         Drag & drop to upload the CBCT M3 Axial slice image or
                                         <span className="ml-2 cursor-pointer text-blue hover:underline">browse</span>
                                     </span>
@@ -151,11 +151,11 @@ const MainPart = () => {
                                 l61.427,88.064C412.04,337.28,412.328,341.905,410.316,345.771z"/>
                                 </svg>
                                 <label
-                                    className="z-10 flex justify-center w-full h-32 px-4 transition rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
+                                    className="z-10 flex justify-center w-full h-32 px-4 px-6 mb-4 transition rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
 
                                     <span className="flex items-center space-x-2">
 
-                                        <span className="font-medium text-gray-600">
+                                        <span className="font-medium text-gray-600 lg:text-xl">
                                             Drag & drop to upload the CBCT M3 Axial slice image here.
                                         </span>
                                     </span>
@@ -186,7 +186,7 @@ const MainPart = () => {
                             onClick={handleUpload}
                             disabled={uploading}
                             style={{ opacity: uploading ? ".5" : "1" }}
-                            className="z-30 w-32 p-3 mt-3 text-xs font-bold text-center text-white border-2 rounded bg-button-color hover:bg-white hover:border-button-color hover:text-button-color"
+                            className="z-30 w-32 p-3 mt-3 text-xs font-bold text-center text-white border-2 rounded-3xl bg-new-special-font hover:bg-white hover:border-new-special-font hover:text-new-special-font"
                         >
                             {!selectedImage ? "Upload another image" : "Upload"}
 
@@ -198,7 +198,7 @@ const MainPart = () => {
                         <button
                             disabled={uploading}
                             style={{ opacity: uploading ? ".5" : "1" }}
-                            className="z-30 w-32 p-3 mt-3 font-bold text-center text-white border-2 rounded bg-button-color hover:bg-white hover:border-button-color hover:text-button-color"
+                            className="z-30 w-32 p-3 mt-3 font-bold text-center text-white border-2 rounded-3xl bg-new-special-font hover:bg-white hover:border-new-special-font hover:text-new-special-font"
                         >
                             {/* {uploading ? "Uploading.." : "Upload"} */}
                             {uploading ? "Uploading.." : "Upload"}
@@ -207,16 +207,18 @@ const MainPart = () => {
 
                 )}
             </div>
-            <div className="col-span-12 text-center lg:col-span-4 rounded-2xl h-5/6 place-content-center">
-                <h2 className="mb-10 text-2xl font-bold text-heading-color">Mandibular Third Molar (M3) Nerve Injury Risk Evaluator</h2>
-                <p className="text-sm">You can try these sample cases:</p>
-                <Link href="/EvaluatePage">
-                    <img
-                        className="w-full max-w-xl transition rounded-md max-h-fit hover:border-gray-400 focus:outline-none"
-                        src="/sample.png"
-                        alt=""
-                    />
-                </Link>
+            <div className="h-full col-span-12 text-center lg:mt-16 drop-shadow-3xl-md lg:h-fit lg:col-span-4 rounded-2xl place-content-center bg-new-bg-color">
+                <div className="h-full p-6">
+                    <h2 className="mb-10 text-2xl font-bold text-heading-color">Mandibular Third Molar (M3) Nerve Injury <br /><span className="text-new-special-font">Risk Evaluator</span></h2>
+                    <p className="my-5 text-sm">You can try these sample cases:</p>
+                    <Link href="/EvaluatePage">
+                        <img
+                            className="w-full max-w-xl transition rounded-md max-h-fit hover:border-gray-400 focus:outline-none"
+                            src="/sample.png"
+                            alt=""
+                        />
+                    </Link>
+                </div>
             </div>
         </div>
     );
