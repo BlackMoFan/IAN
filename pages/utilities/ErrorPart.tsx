@@ -54,7 +54,7 @@ const EvaluatePart= () => {
                 </div>
                 <Link href="/">
                     <button
-                        className="z-30 flex gap-6 p-3 mx-auto font-bold text-center text-black rounded mt-9 w-60 bg-button-color"
+                        className="z-30 flex gap-6 p-3 mx-auto font-bold text-center text-white border-2 rounded mt-9 w-60 bg-button-color hover:bg-white hover:border-button-color hover:text-button-color"
                     >
                         {/* {uploading ? "Uploading.." : "Upload"} */}
                         {/* {uploading ? "Uploading.." : "Upload"} */}
