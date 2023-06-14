@@ -14,7 +14,7 @@ const EvaluatePart= () => {
                     />
                 </div>
                 <div className="col-span-12 p-3 text-black h-fit lg:h-full lg:col-span-5 sm:col-span-6 rounded-2xl place-content-center">
-                    <h1 className="my-3 text-2xl font-bold lg:mt-21 mt- lg:text-4xl">Results</h1>
+                    <h1 className="my-3 text-2xl font-bold lg:mt-24 lg:text-4xl">Results</h1>
                     <div className="flex flex-row gap-6 my-1 lg:my-6 place-items-center">
                         <img
                             className="w-5 h-5 transition rounded-md lg:w-10 lg:h-10 hover:border-gray-400 focus:outline-none"
@@ -23,7 +23,7 @@ const EvaluatePart= () => {
                         />
                         <h2 className="lg:text-lg text-md">Mandibular Third Molar</h2>
                     </div>
-                    <div className="flex flex-row gap-6 my-1 lg:my-6 place-items-center">
+                    <div className="flex flex-row gap-6 my-3 lg:my-6 place-items-center">
                         <img
                             className="w-5 h-5 transition rounded-md lg:w-10 lg:h-10 hover:border-gray-400 focus:outline-none"
                             src="mc.svg"
