@@ -32,19 +32,19 @@ const EvaluatePart= () => {
                     </div>
                     <h1 className="my-6 font-bold md:my-3 lg:text-4xl md:text-2xl lg:my-9">Results</h1>
                     <div className="grid grid-cols-6 text-sm">
-                        <div className="grid col-span-3 ">
-                            <p className=" lg:my-2 md:my-1 sm:my-1">M3-MC relation:</p>
-                            <p className=" lg:my-2 md:my-1 sm:my-1">Position:</p>
-                            <p className=" lg:my-2 md:my-1 sm:my-1">Distance of IAN to M3:</p>
-                            <p className=" lg:my-2 md:my-1 sm:my-1">Interruption of Corticalization:</p>
-                            <p className=" lg:my-2 md:my-1 sm:my-1">Risk of nerve injury:</p>
+                        <div className="grid col-span-4 ">
+                            <p className="m-0 my-1 lg:my-2">M3-MC relation:</p>
+                            <p className="m-0 my-1 lg:my-2">Position:</p>
+                            <p className="m-0 my-1 lg:my-2">Distance of IAN to M3:</p>
+                            <p className="m-0 my-1 lg:my-2">Interruption of Corticalization:</p>
+                            <p className="m-0 my-1 lg:my-2">Risk of nerve injury:</p>
                         </div>
-                        <div className="grid col-span-3 font-bold ">
-                            <p className=" lg:my-2 md:my-1 sm:my-1">Class 1A</p>
-                            <p className=" lg:my-2 md:my-1 sm:my-1">Buccal</p>
-                            <p className=" lg:my-2 md:my-1 sm:my-1">1.8 mm</p>
-                            <p className=" lg:my-2 md:my-1 sm:my-1">False</p>
-                            <p className=" lg:my-2 md:my-1 sm:my-1">N.1 Low</p>
+                        <div className="grid col-span-2 font-bold ">
+                            <p className="m-0 my-1 lg:my-2">Class 1A</p>
+                            <p className="m-0 my-1 lg:my-2">Buccal</p>
+                            <p className="m-0 my-1 lg:my-2">1.8 mm</p>
+                            <p className="m-0 my-1 lg:my-2">False</p>
+                            <p className="m-0 my-1 lg:my-2">N.1 Low</p>
                         </div>
                     </div>
                     <Link href="/">
