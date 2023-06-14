@@ -33,18 +33,18 @@ const EvaluatePart= () => {
                     <h1 className="my-6 font-bold md:my-3 lg:text-4xl md:text-2xl lg:my-9">Results</h1>
                     <div className="grid grid-cols-6 text-sm lg:text-base">
                         <div className="grid col-span-4 ">
-                            <p className="my-2 lg:my-3">M3-MC relation:</p>
-                            <p className="my-2 lg:my-3">Position:</p>
-                            <p className="my-2 lg:my-3">Distance of IAN to M3:</p>
-                            <p className="my-2 lg:my-3">Interruption of Corticalization:</p>
-                            <p className="my-2 lg:my-3">Risk of nerve injury:</p>
+                            <p className="my-2 lg:my-3 md:my-1 sm:my-1">M3-MC relation:</p>
+                            <p className="my-2 lg:my-3 md:my-1 sm:my-1">Position:</p>
+                            <p className="my-2 lg:my-3 md:my-1 sm:my-1">Distance of IAN to M3:</p>
+                            <p className="my-2 lg:my-3 md:my-1 sm:my-1">Interruption of Corticalization:</p>
+                            <p className="my-2 lg:my-3 md:my-1 sm:my-1">Risk of nerve injury:</p>
                         </div>
                         <div className="grid col-span-2 font-bold ">
-                            <p className="my-2 lg:my-3">Class 1A</p>
-                            <p className="my-2 lg:my-3">Buccal</p>
-                            <p className="my-2 lg:my-3">1.8 mm</p>
-                            <p className="my-2 lg:my-3">False</p>
-                            <p className="my-2 lg:my-3">N.1 Low</p>
+                            <p className="my-2 lg:my-3 md:my-1 sm:my-1">Class 1A</p>
+                            <p className="my-2 lg:my-3 md:my-1 sm:my-1">Buccal</p>
+                            <p className="my-2 lg:my-3 md:my-1 sm:my-1">1.8 mm</p>
+                            <p className="my-2 lg:my-3 md:my-1 sm:my-1">False</p>
+                            <p className="my-2 lg:my-3 md:my-1 sm:my-1">N.1 Low</p>
                         </div>
                     </div>
                     <Link href="/">
