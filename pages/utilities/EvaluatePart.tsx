@@ -14,6 +14,7 @@ const EvaluatePart= () => {
                     />
                 </div>
                 <div className="col-span-12 p-3 text-black h-fit lg:h-full lg:col-span-5 sm:col-span-6 rounded-2xl place-content-center">
+                    <h1 className="my-6 font-bold md:my-3 lg:text-4xl md:text-2xl lg:my-9">Results</h1>
                     <div className="flex flex-row gap-6 my-1 lg:my-6 lg:mt-24 place-items-center">
                         <img
                             className="w-5 h-5 transition rounded-md lg:w-10 lg:h-10 hover:border-gray-400 focus:outline-none"
@@ -30,7 +31,6 @@ const EvaluatePart= () => {
                         />
                         <h2 className="lg:text-lg text-md">Mandibular Canal</h2>
                     </div>
-                    <h1 className="my-6 font-bold md:my-3 lg:text-4xl md:text-2xl lg:my-9">Results</h1>
                     <div className="grid grid-cols-6 text-sm">
                         <div className="grid col-span-4 ">
                             <p className="m-0 my-1 lg:my-2">M3-MC relation:</p>
