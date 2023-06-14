@@ -14,8 +14,8 @@ const EvaluatePart= () => {
                     />
                 </div>
                 <div className="col-span-12 p-3 text-black h-fit lg:h-full lg:col-span-5 sm:col-span-6 rounded-2xl place-content-center">
-                    <h1 className="my-6 font-bold md:my-3 lg:text-4xl md:text-2xl lg:my-9">Results</h1>
-                    <div className="flex flex-row gap-6 my-1 lg:my-6 lg:mt-24 place-items-center">
+                    <h1 className="my-3 text-2xl font-bold lg:mt-28 mt- lg:text-4xl">Results</h1>
+                    <div className="flex flex-row gap-6 my-1 lg:my-6 place-items-center">
                         <img
                             className="w-5 h-5 transition rounded-md lg:w-10 lg:h-10 hover:border-gray-400 focus:outline-none"
                             src="m3.svg"
