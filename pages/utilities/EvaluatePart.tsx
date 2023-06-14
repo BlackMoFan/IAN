@@ -20,7 +20,7 @@ const EvaluatePart= () => {
                             src="m3.svg"
                             alt=""
                         />
-                        <h2 className="lg:text-2xl md:text-lg">Mandibular Third Molar</h2>
+                        <h2 className="lg:text-2xl md:text-lg sm:text-md">Mandibular Third Molar</h2>
                     </div>
                     <div className="flex flex-row gap-6 my-6 place-items-center">
                         <img
@@ -28,9 +28,9 @@ const EvaluatePart= () => {
                             src="mc.svg"
                             alt=""
                         />
-                        <h2 className="lg:text-2xl md:text-lg">Mandibular Canal</h2>
+                        <h2 className="lg:text-2xl md:text-lg sm:text-md">Mandibular Canal</h2>
                     </div>
-                    <h1 className="my-6 font-bold md:my-3 lg:text-4xl lg:my-9">Results</h1>
+                    <h1 className="my-6 font-bold md:my-3 lg:text-4xl md:text-2xl lg:my-9">Results</h1>
                     <div className="grid grid-cols-6 text-sm lg:text-base">
                         <div className="grid col-span-4 ">
                             <p className="my-2 lg:my-3">M3-MC relation:</p>
