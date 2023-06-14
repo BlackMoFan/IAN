@@ -5,8 +5,8 @@ import Link from "next/link";
 const EvaluatePart= () => {
 
     return (
-        <div className="grid justify-center h-screen grid-cols-12 gap-6 p-4 px-5 bg-white lg:px-48 flex-center place-items-center">
-            <div className="grid w-full h-full col-span-12 p-4 text-center mb-9 lg:h-full bg-input-area place-items-center text-input-area-text lg:col-span-7 rounded-2xl">
+        <div className="z-10 grid justify-center lg:h-full h-vh w-[90vw] mx-auto rounded-3xl grid-cols-12 gap-6 px-5 drop-shadow-3xl-md bg-new-bg-color lg:px-48 flex-center place-items-center">
+            <div className="grid h-full col-span-12 p-4 mb-1 text-center w-fit lg:h-full place-items-center text-input-area-text lg:col-span-7 rounded-2xl">
                 <div className="h-64 bg-white rounded-2xl w-80 place-items-center">
                     <BiError className="w-32 h-32 mx-auto text-yellow"/>
                     <h3 className="font-bold">Check Input Image</h3>
@@ -18,21 +18,21 @@ const EvaluatePart= () => {
                     alt=""
                 /> */}
             </div>
-            <div className="h-full col-span-12 p-3 text-black lg:h-[100vh] lg:col-span-5 rounded-2xl place-content-center">
-                <div className="flex flex-row gap-6 my-6 place-items-center">
-                    <svg fill="#9F8FB4" className="w-20 h-20" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 94">
-                    <g>
-                        <path d="M94,88c0,3.312-2.688,6-6,6H6c-3.314,0-6-2.688-6-6V6c0-3.313,2.686-6,6-6h82c3.312,0,6,2.687,6,6V88z"/>
-                    </g>
-                    </svg>
+            <div className="h-full col-span-12 p-3 text-black lg:h-[100vh] lg:col-span-5 sm:col-span-6 rounded-2xl place-content-center">
+                <div className="flex flex-row gap-6 my-3 lg:mt-24 place-items-center">
+                    <img
+                        className="w-10 h-10 max-w-xl transition rounded-md lg:w-20 lg:h-20 max-h-fit hover:border-gray-400 focus:outline-none"
+                        src="m3.svg"
+                        alt=""
+                    />
                     <h2 className="text-2xl">Mandibular Third Molar</h2>
                 </div>
                 <div className="flex flex-row gap-6 my-6 place-items-center">
-                    <svg fill="#894A68" className="w-20 h-20" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 94">
-                    <g>
-                        <path d="M94,88c0,3.312-2.688,6-6,6H6c-3.314,0-6-2.688-6-6V6c0-3.313,2.686-6,6-6h82c3.312,0,6,2.687,6,6V88z"/>
-                    </g>
-                    </svg>
+                    <img
+                        className="w-10 h-10 max-w-xl transition rounded-md lg:w-20 lg:h-20 max-h-fit hover:border-gray-400 focus:outline-none"
+                        src="mc.svg"
+                        alt=""
+                    />
                     <h2 className="text-2xl">Mandibular Canal</h2>
                 </div>
                 <h1 className="text-4xl font-bold my-9">Results</h1>
@@ -54,7 +54,7 @@ const EvaluatePart= () => {
                 </div>
                 <Link href="/">
                     <button
-                        className="z-30 flex gap-6 p-3 mx-auto font-bold text-center text-white border-2 rounded mt-9 w-60 bg-button-color hover:bg-white hover:border-button-color hover:text-button-color"
+                        className="z-30 flex gap-6 p-3 mx-auto font-bold text-center text-white border-2 rounded-2xl mt-9 w-60 bg-new-special-font hover:bg-white hover:border-new-special-font hover:text-new-special-font"
                     >
                         {/* {uploading ? "Uploading.." : "Upload"} */}
                         {/* {uploading ? "Uploading.." : "Upload"} */}
