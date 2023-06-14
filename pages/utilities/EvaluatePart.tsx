@@ -14,21 +14,21 @@ const EvaluatePart= () => {
                     />
                 </div>
                 <div className="col-span-12 p-3 text-black h-fit lg:h-full lg:col-span-5 sm:col-span-6 rounded-2xl place-content-center">
-                    <div className="flex flex-row gap-6 my-6 lg:mt-24 place-items-center">
+                    <div className="flex flex-row gap-6 my-1 lg:my-6 lg:mt-24 place-items-center">
                         <img
                             className="w-10 h-10 max-w-xl transition rounded-md lg:w-20 lg:h-20 max-h-fit hover:border-gray-400 focus:outline-none"
                             src="m3.svg"
                             alt=""
                         />
-                        <h2 className="lg:text-2xl md:text-lg sm:text-md">Mandibular Third Molar</h2>
+                        <h2 className="lg:text-2xl text-md">Mandibular Third Molar</h2>
                     </div>
-                    <div className="flex flex-row gap-6 my-6 place-items-center">
+                    <div className="flex flex-row gap-6 my-1 lg:my-6 place-items-center">
                         <img
                             className="w-10 h-10 max-w-xl transition rounded-md lg:w-20 lg:h-20 max-h-fit hover:border-gray-400 focus:outline-none"
                             src="mc.svg"
                             alt=""
                         />
-                        <h2 className="lg:text-2xl md:text-lg sm:text-md">Mandibular Canal</h2>
+                        <h2 className="lg:text-2xl text-md">Mandibular Canal</h2>
                     </div>
                     <h1 className="my-6 font-bold md:my-3 lg:text-4xl md:text-2xl lg:my-9">Results</h1>
                     <div className="grid grid-cols-6 text-sm">
