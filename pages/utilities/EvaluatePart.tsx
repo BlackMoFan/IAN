@@ -49,7 +49,7 @@ const EvaluatePart= () => {
                     </div>
                     <Link href="/">
                         <button
-                            className="z-30 flex gap-6 p-3 mx-auto font-bold text-center text-white border-2 rounded border-new-special-font mt-9 w-60 bg-new-special-font hover:bg-white hover:border-new-special-font hover:text-new-special-font"
+                            className="z-30 flex gap-6 p-3 mx-auto font-bold text-center text-white border-2 rounded-2xl border-new-special-font mt-9 w-60 bg-new-special-font hover:bg-white hover:border-new-special-font hover:text-new-special-font"
                         >
                             {/* {uploading ? "Uploading.." : "Upload"} */}
                             {/* {uploading ? "Uploading.." : "Upload"} */}
