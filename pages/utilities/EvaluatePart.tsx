@@ -13,7 +13,7 @@ const EvaluatePart= () => {
                         alt=""
                     />
                 </div>
-                <div className="h-full col-span-12 p-3 text-black lg:h-[100vh] lg:col-span-5 sm:col-span-6 rounded-2xl place-content-center">
+                <div className="h-full col-span-12 lg:mt-9 p-3 text-black lg:h-[100vh] lg:col-span-5 sm:col-span-6 rounded-2xl place-content-center">
                     <div className="flex flex-row gap-6 my-6 place-items-center">
                         <img
                             className="max-w-xl transition rounded-md md:w-10 md:h-10 lg:w-20 lg:h-20 max-h-fit hover:border-gray-400 focus:outline-none"
