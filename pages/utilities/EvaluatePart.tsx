@@ -32,14 +32,14 @@ const EvaluatePart= () => {
                     </div>
                     <h1 className="my-6 font-bold md:my-3 lg:text-4xl md:text-2xl lg:my-9">Results</h1>
                     <div className="grid grid-cols-6 text-sm lg:text-base">
-                        <div className="grid col-span-4 ">
+                        <div className="grid col-span-3 ">
                             <p className="my-2 lg:my-3 md:my-1 sm:my-1">M3-MC relation:</p>
                             <p className="my-2 lg:my-3 md:my-1 sm:my-1">Position:</p>
                             <p className="my-2 lg:my-3 md:my-1 sm:my-1">Distance of IAN to M3:</p>
                             <p className="my-2 lg:my-3 md:my-1 sm:my-1">Interruption of Corticalization:</p>
                             <p className="my-2 lg:my-3 md:my-1 sm:my-1">Risk of nerve injury:</p>
                         </div>
-                        <div className="grid col-span-2 font-bold ">
+                        <div className="grid col-span-3 font-bold ">
                             <p className="my-2 lg:my-3 md:my-1 sm:my-1">Class 1A</p>
                             <p className="my-2 lg:my-3 md:my-1 sm:my-1">Buccal</p>
                             <p className="my-2 lg:my-3 md:my-1 sm:my-1">1.8 mm</p>
