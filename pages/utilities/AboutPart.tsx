@@ -38,7 +38,7 @@ const AboutPart= () => {
                     </div>
                 </div>
                 <Image
-                    className="mt-6 w-fit h-fit drop-shadow-3xl-md place-items-center rounded-3xl"
+                    className="mt-6 max-h-fit w-fit h-fit drop-shadow-3xl-md place-items-center rounded-3xl"
                     src="/groupphoto.jpg"
                     alt="BSCS3B Group 1 Photo"
                     width={800}

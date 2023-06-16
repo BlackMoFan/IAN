@@ -44,7 +44,7 @@ const EvaluatePart= () => {
                         /> */}
                         <h2 className="lg:text-lg text-md">Mandibular Third Molar</h2>
                     </div>
-                    <div className="flex flex-row gap-6 my-3 lg:my-6 place-items-center">
+                    <div className="flex flex-row gap-6 mb-6 lg:my-6 place-items-center">
                         <Image
                             src="mc.svg"
                             className="w-5 h-5 transition rounded-md lg:w-10 lg:h-10 hover:border-gray-400 focus:outline-none"
