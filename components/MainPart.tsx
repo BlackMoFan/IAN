@@ -84,24 +84,49 @@ const MainPart = () => {
             <title>Home Page | Molar Sense</title>
         </Head>
 
-            {/* Put this part before </body> tag */}
-            <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+            {/* for error modal */}
+            <input type="checkbox" id="my_modal_1" className="modal-toggle" />
             <div className="modal">
-            <div className="text-black bg-white modal-box">
-                {/* <img src="errorIcon.svg" className="w-32 h-32 mx-auto" /> */}
-                <Image
-                    src="errorIcon.svg"
-                    className="mx-auto"
-                    alt="Error Icon"
-                    width={150}
-                    height={75}
-                />
-                <h3 className="mt-3 text-lg font-bold text-center">Check Input Image</h3>
-                <p className="py-4 font-light text-center">Mandibular third molar and mandibular canal was not detected.</p>
-                <div className="justify-center border-2 border-black modal-action">
-                <label htmlFor="my_modal_6" className="w-32 p-3 mt-3 font-bold text-center text-white cursor-pointer rounded-3xl bg-new-special-font hover:bg-white hover:border-new-special-font hover:text-new-special-font">Try Again</label>
+                <div className="text-black bg-white modal-box">
+                    {/* <img src="errorIcon.svg" className="w-32 h-32 mx-auto" /> */}
+                    <Image
+                        src="errorIcon.svg"
+                        className="mx-auto"
+                        alt="Error Icon"
+                        width={150}
+                        height={75}
+                    />
+                    <h3 className="mt-3 text-lg font-bold text-center">Check Input Image</h3>
+                    <p className="py-4 font-light text-center">Mandibular third molar and mandibular canal was not detected.</p>
+                    <div className="justify-center modal-action">
+                        <label htmlFor="my_modal_1" className="w-32 p-3 mt-3 font-bold text-center text-white border-2 border-solid cursor-pointer rounded-3xl bg-new-special-font hover:bg-white hover:border-new-special-font hover:text-new-special-font">Try Again</label>
+                    </div>
                 </div>
             </div>
+
+            {/* for success modal */}
+            <input type="checkbox" id="my_modal_2" className="modal-toggle" />
+            <div className="modal">
+                <div className="text-black bg-white modal-box">
+                    {/* <img src="errorIcon.svg" className="w-32 h-32 mx-auto" /> */}
+                    <Image
+                        src="successIcon.svg"
+                        className="mx-auto"
+                        alt="Error Icon"
+                        width={150}
+                        height={75}
+                    />
+                    <h3 className="mt-3 text-lg font-bold text-center">Image Uploaded</h3>
+                    <p className="py-4 font-light text-center">Let's start processing your input image!</p>
+                    <div className="justify-center gap-6 border-2 border-black modal-action">
+                        <label 
+                            htmlFor="my_modal_2"
+                            className="border-[#D0D5DD] border-2 border-solid w-52 p-3 mt-3 font-bold text-center text-black cursor-pointer rounded-xl bg-white hover:bg-[#D0D5DD] hover:border-white hover:text-white">
+                            Cancel
+                        </label>
+                        <label htmlFor="my_modal_2" className="p-3 mt-3 font-bold text-center text-white border-2 border-solid cursor-pointer w-52 rounded-xl bg-new-special-font hover:bg-white hover:border-new-special-font hover:text-new-special-font">Confirm</label>
+                    </div>
+                </div>
             </div>
             
             <div className="grid w-full col-span-12 p-4 text-center bg-white h-fit lg:mt-12 lg:w-full gap-9 lg:gap-12 place-items-center lg:h-fit text-input-area-text lg:col-span-8 rounded-2xl">
@@ -128,8 +153,8 @@ const MainPart = () => {
                         <Image
                             src={selectedImage}
                             alt="Uploaded photo"
-                            width={150}
-                            height={75}
+                            width={800}
+                            height={500}
                         />
                         // <img
                         //     className="w-full max-w-xl transition rounded-md max-h-fit hover:border-gray-400 focus:outline-none"
@@ -225,9 +250,6 @@ const MainPart = () => {
 
                 </div>
 
-                {/* The button to open modal */}
-                <label htmlFor="my_modal_6" className="text-new-special-font btn rounded-3xl">try error modal</label>
-
                 {selectedImage ? (
                     // <Link href={{ pathname: '../pages/EvaluatePage', query: { keyword: 'source freeze' } }}>
                     <Link href="/EvaluatePage">
@@ -255,6 +277,12 @@ const MainPart = () => {
                     </Link>
 
                 )}
+
+                {/* The button to open try again modal */}
+                <label htmlFor="my_modal_1" className="text-new-special-font btn rounded-3xl">try error modal</label>
+                {/* The button to open confirm upload modal */}
+                <label htmlFor="my_modal_2" className="text-new-special-font btn rounded-3xl">try success modal</label>
+
             </div>
             <div className="h-full col-span-12 text-center lg:mt-3 drop-shadow-3xl-md lg:h-fit lg:col-span-4 rounded-2xl place-content-center bg-new-bg-color">
                 <div className="h-full p-6">

@@ -7,13 +7,13 @@ const EvaluatePart= () => {
 
     return (
         // <div className="bg-new-bg-color w-[80vw]">
-            <div className="z-10 grid justify-center lg:h-full h-fit w-[90vw] mx-auto rounded-3xl grid-cols-12 gap-6 px-5 drop-shadow-3xl-md bg-new-bg-color lg:px-24 flex-center place-items-center">
+            <div className="py-6 z-10 grid justify-center h-fit w-[90vw] mx-auto rounded-3xl grid-cols-12 gap-6 px-5 drop-shadow-3xl-md bg-new-bg-color lg:px-24 flex-center place-items-center">
                 
                 <Head>
                     <title>Processing Uploaded Photo | Molar Sense</title>
                 </Head>
                 
-                <div className="grid w-full col-span-12 p-4 text-center bg-white h-fit lg:mt-0 mt-14 mb-9 lg:h-fit drop-shadow-3xl-md place-items-center text-input-area-text sm:col-span-6 lg:col-span-7 rounded-2xl">
+                <div className="grid w-full col-span-12 p-4 text-center bg-white h-fit lg:mt-0 lg:h-fit drop-shadow-3xl-md place-items-center text-input-area-text sm:col-span-6 lg:col-span-7 rounded-2xl">
                     <Image
                         src="/classified2.png"
                         className="w-full max-w-xl transition rounded-2xl max-h-fit hover:border-gray-400 focus:outline-none"
@@ -28,7 +28,7 @@ const EvaluatePart= () => {
                     /> */}
                 </div>
                 <div className="col-span-12 p-3 text-black h-fit lg:h-full lg:col-span-5 sm:col-span-6 rounded-2xl place-content-center">
-                    <h1 className="my-3 text-2xl font-bold lg:mt-24 lg:text-4xl">Results</h1>
+                    <h1 className="my-3 text-2xl font-bold text-new-special-font lg:mt-24 lg:text-4xl">Results</h1>
                     <div className="flex flex-row gap-6 my-1 lg:my-6 place-items-center">
                         <Image
                             src="m3.svg"
