@@ -284,7 +284,7 @@ const MainPart = () => {
                 <label htmlFor="my_modal_2" className="text-new-special-font btn rounded-3xl">try success modal</label>
 
             </div>
-            <div className="h-full col-span-12 text-center lg:mt-3 drop-shadow-3xl-md lg:h-fit lg:col-span-4 rounded-2xl place-content-center bg-new-bg-color">
+            <div className="col-span-12 mb-6 text-center h-fit lg:mt-3 drop-shadow-3xl-md lg:h-fit lg:col-span-4 rounded-2xl place-content-center bg-new-bg-color">
                 <div className="h-full p-6">
                     <h2 className="mb-10 text-2xl font-bold text-heading-color">Mandibular Third Molar (M3) Nerve Injury <br /><span className="text-new-special-font">Risk Evaluator</span></h2>
                     <p className="my-5 text-sm">You can try these sample cases:</p>
