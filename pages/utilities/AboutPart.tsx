@@ -11,7 +11,7 @@ const AboutPart= () => {
         </Head>
         
             <div className="col-span-12 text-center text-black bg-white h-fit p-9 lg:mt-3 drop-shadow-3xl-md lg:h-full lg:col-span-6 rounded-2xl place-content-center">
-                <div className="p-3">
+                <div className="p-3 text-2xl">
                     <span className="font-bold">About </span>
                     <span className="font-medium">Mo</span>
                     <span className="font-semibold">lar</span>
@@ -27,7 +27,7 @@ const AboutPart= () => {
             </div>
             <div className="grid w-full col-span-12 h-fit lg:mt-3 lg:w-full place-items-center lg:h-full lg:col-span-6 ">
                 <div className="text-center text-white p-9 bg-new-special-font drop-shadow-3xl-md h-fit lg:w-full place-items-center lg:h-full rounded-2xl">
-                    <div className="p-3">
+                    <div className="p-3 text-2xl">
                         <span className="font-bold">BSCS-3B </span>
                     </div>
                     <div className="text-left">
