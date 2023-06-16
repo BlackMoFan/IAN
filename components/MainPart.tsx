@@ -6,6 +6,8 @@ import Link from "next/link";
 // import { redirect } from 'next/navigation';
 import { useRouter } from 'next/router';
 // import Router from 'next/router';
+import Head from 'next/head'
+import Image from 'next/image'
 
 const MainPart = () => {
     const [uploading, setUploading] = useState(false);
@@ -78,11 +80,22 @@ const MainPart = () => {
     return (
         <div className="grid justify-center h-full grid-cols-12 gap-6 px-5 bg-white lg:px-48 flex-center place-items-center">
 
+        <Head>
+            <title>Home Page | Molar Sense</title>
+        </Head>
+
             {/* Put this part before </body> tag */}
             <input type="checkbox" id="my_modal_6" className="modal-toggle" />
             <div className="modal">
             <div className="text-black bg-white modal-box">
-                <img src="errorIcon.svg" className="w-32 h-32 mx-auto" />
+                {/* <img src="errorIcon.svg" className="w-32 h-32 mx-auto" /> */}
+                <Image
+                    src="errorIcon.svg"
+                    className="mx-auto"
+                    alt="Error Icon"
+                    width={150}
+                    height={75}
+                />
                 <h3 className="mt-3 text-lg font-bold text-center">Check Input Image</h3>
                 <p className="py-4 font-light text-center">Mandibular third molar and mandibular canal was not detected.</p>
                 <div className="justify-center border-2 border-black modal-action">
@@ -112,11 +125,17 @@ const MainPart = () => {
                         //     )
                         // })}
 
-                        <img
-                            className="w-full max-w-xl transition rounded-md max-h-fit hover:border-gray-400 focus:outline-none"
+                        <Image
                             src={selectedImage}
-                            alt=""
+                            alt="Uploaded photo"
+                            width={150}
+                            height={75}
                         />
+                        // <img
+                        //     className="w-full max-w-xl transition rounded-md max-h-fit hover:border-gray-400 focus:outline-none"
+                        //     src={selectedImage}
+                        //     alt=""
+                        // />
                     ) : !isDragActive ? (
                         <>
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-24 h-24 mx-auto text-gray-600 my-14" fill="#929292" version="1.1" id="Capa_1"
@@ -242,11 +261,18 @@ const MainPart = () => {
                     <h2 className="mb-10 text-2xl font-bold text-heading-color">Mandibular Third Molar (M3) Nerve Injury <br /><span className="text-new-special-font">Risk Evaluator</span></h2>
                     <p className="my-5 text-sm">You can try these sample cases:</p>
                     <Link href="/EvaluatePage">
-                        <img
+                        <Image
+                            src="/sample.png"
+                            className="w-full max-w-xl transition rounded-md max-h-fit hover:border-gray-400 focus:outline-none"
+                            alt="Sample photo"
+                            width={800}
+                            height={500}
+                        />
+                        {/* <img
                             className="w-full max-w-xl transition rounded-md max-h-fit hover:border-gray-400 focus:outline-none"
                             src="/sample.png"
                             alt=""
-                        />
+                        /> */}
                     </Link>
                 </div>
             </div>

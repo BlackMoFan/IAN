@@ -1,34 +1,62 @@
 import { TfiReload } from 'react-icons/tfi';
 import Link from "next/link";
+import Head from 'next/head'
+import Image from 'next/image'
 
 const EvaluatePart= () => {
 
     return (
         // <div className="bg-new-bg-color w-[80vw]">
             <div className="z-10 grid justify-center lg:h-full h-fit w-[90vw] mx-auto rounded-3xl grid-cols-12 gap-6 px-5 drop-shadow-3xl-md bg-new-bg-color lg:px-24 flex-center place-items-center">
+                
+                <Head>
+                    <title>Processing Uploaded Photo | Molar Sense</title>
+                </Head>
+                
                 <div className="grid w-full col-span-12 p-4 text-center bg-white h-fit lg:mt-0 mt-14 mb-9 lg:h-fit drop-shadow-3xl-md place-items-center text-input-area-text sm:col-span-6 lg:col-span-7 rounded-2xl">
-                    <img 
+                    <Image
+                        src="/classified2.png"
+                        className="w-full max-w-xl transition rounded-2xl max-h-fit hover:border-gray-400 focus:outline-none"
+                        alt="Example picture"
+                        width={800}
+                        height={500}
+                    />
+                    {/* <img 
                         className="w-full max-w-xl transition rounded-2xl max-h-fit hover:border-gray-400 focus:outline-none"
                         src="/classified2.png" 
                         alt=""
-                    />
+                    /> */}
                 </div>
                 <div className="col-span-12 p-3 text-black h-fit lg:h-full lg:col-span-5 sm:col-span-6 rounded-2xl place-content-center">
                     <h1 className="my-3 text-2xl font-bold lg:mt-24 lg:text-4xl">Results</h1>
                     <div className="flex flex-row gap-6 my-1 lg:my-6 place-items-center">
-                        <img
+                        <Image
+                            src="m3.svg"
+                            className="w-5 h-5 transition rounded-md lg:w-10 lg:h-10 hover:border-gray-400 focus:outline-none"
+                            alt="Mandibular third molar"
+                            width={800}
+                            height={500}
+                        />
+                        {/* <img
                             className="w-5 h-5 transition rounded-md lg:w-10 lg:h-10 hover:border-gray-400 focus:outline-none"
                             src="m3.svg"
                             alt=""
-                        />
+                        /> */}
                         <h2 className="lg:text-lg text-md">Mandibular Third Molar</h2>
                     </div>
                     <div className="flex flex-row gap-6 my-3 lg:my-6 place-items-center">
-                        <img
+                        <Image
+                            src="mc.svg"
+                            className="w-5 h-5 transition rounded-md lg:w-10 lg:h-10 hover:border-gray-400 focus:outline-none"
+                            alt="Mandibular third molar"
+                            width={800}
+                            height={500}
+                        />
+                        {/* <img
                             className="w-5 h-5 transition rounded-md lg:w-10 lg:h-10 hover:border-gray-400 focus:outline-none"
                             src="mc.svg"
                             alt=""
-                        />
+                        /> */}
                         <h2 className="lg:text-lg text-md">Mandibular Canal</h2>
                     </div>
                     <div className="grid grid-cols-6 text-sm">
