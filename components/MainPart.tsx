@@ -63,9 +63,35 @@ const MainPart = () => {
     // ERROR HANDLING
     if (isDragReject) router.push('/ErrorPage');
 
+    // ERROR HANDLING FOR WRONG PHOTO UPLOADED
+    function toggleCheckbox(event: Event): void {
+      const checkbox = event.target as HTMLInputElement;
+      checkbox.checked = !checkbox.checked;
+    }
+
+    if (isDragReject) {
+        let checkbox = document.getElementsByClassName('modal');
+        checkbox[0].addEventListener('click', toggleCheckbox);
+    }
+    // ERROR HANDLING FOR WRONG PHOTO UPLOADED
+
     return (
         <div className="grid justify-center h-full grid-cols-12 gap-6 px-5 bg-white lg:px-48 flex-center place-items-center">
-            <div className="grid w-full h-full col-span-12 p-4 text-center bg-white lg:w-fit gap-9 lg:gap-12 place-items-center lg:h-2/6 text-input-area-text lg:col-span-8 rounded-2xl">
+
+            {/* Put this part before </body> tag */}
+            <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+            <div className="modal">
+            <div className="text-black bg-white modal-box">
+                <img src="errorIcon.svg" className="w-32 h-32 mx-auto" />
+                <h3 className="mt-3 text-lg font-bold text-center">Check Input Image</h3>
+                <p className="py-4 font-light text-center">Mandibular third molar and mandibular canal was not detected.</p>
+                <div className="justify-center border-2 border-black modal-action">
+                <label htmlFor="my_modal_6" className="w-32 p-3 mt-3 font-bold text-center text-white cursor-pointer rounded-3xl bg-new-special-font hover:bg-white hover:border-new-special-font hover:text-new-special-font">Try Again</label>
+                </div>
+            </div>
+            </div>
+            
+            <div className="grid w-full col-span-12 p-4 text-center bg-white h-fit lg:mt-12 lg:w-full gap-9 lg:gap-12 place-items-center lg:h-fit text-input-area-text lg:col-span-8 rounded-2xl">
                 <div className="z-10 max-w-xl p-3 border-4 border-gray-300 border-dashed h-fit lg:h-full items-center lg:w-[30vw] rounded-2xl w-80 place-content-center bg-input-area" {...getRootProps()}>
                     {/* {isDragReject && (router.push('/ErrorPage'););
                         // redirect('../pages/ErrorPage')
@@ -123,7 +149,7 @@ const MainPart = () => {
                                 type="file"
                                 name="file_upload"
                                 className="z-10 hidden"
-                                accept=".jpg, .jpeg, .png"
+                                // accept=".jpg, .jpeg, .png"
                                 onChange={({ target }) => {
                                     if (target.files) {
                                         const file = target.files[0];
@@ -179,6 +205,10 @@ const MainPart = () => {
 
 
                 </div>
+
+                {/* The button to open modal */}
+                <label htmlFor="my_modal_6" className="text-new-special-font btn rounded-3xl">try error modal</label>
+
                 {selectedImage ? (
                     // <Link href={{ pathname: '../pages/EvaluatePage', query: { keyword: 'source freeze' } }}>
                     <Link href="/EvaluatePage">
@@ -207,7 +237,7 @@ const MainPart = () => {
 
                 )}
             </div>
-            <div className="h-full col-span-12 text-center lg:mt-16 drop-shadow-3xl-md lg:h-fit lg:col-span-4 rounded-2xl place-content-center bg-new-bg-color">
+            <div className="h-full col-span-12 text-center lg:mt-3 drop-shadow-3xl-md lg:h-fit lg:col-span-4 rounded-2xl place-content-center bg-new-bg-color">
                 <div className="h-full p-6">
                     <h2 className="mb-10 text-2xl font-bold text-heading-color">Mandibular Third Molar (M3) Nerve Injury <br /><span className="text-new-special-font">Risk Evaluator</span></h2>
                     <p className="my-5 text-sm">You can try these sample cases:</p>

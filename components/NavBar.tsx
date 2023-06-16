@@ -23,7 +23,7 @@ const NavBar = () => {
                         </ul> */}
                     </li>
                     <li>
-                        <Link className="hover:bg-new-special-font hover:text-white" href="https://github.com/BlackMoFan/IAN"><AiOutlineGithub /></Link>
+                        <Link className="hover:bg-new-special-font hover:text-white" href="https://github.com/BlackMoFan/MolarSense"><AiOutlineGithub /></Link>
                     </li>
                 </ul>
             </div>

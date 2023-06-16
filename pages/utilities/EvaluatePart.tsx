@@ -5,8 +5,8 @@ const EvaluatePart= () => {
 
     return (
         // <div className="bg-new-bg-color w-[80vw]">
-            <div className="z-10 grid justify-center lg:h-full h-vh w-[90vw] mx-auto rounded-3xl grid-cols-12 gap-6 px-5 drop-shadow-3xl-md bg-new-bg-color lg:px-48 flex-center place-items-center">
-                <div className="grid w-full h-full col-span-12 p-4 text-center bg-white lg:mt-0 mt-14 mb-9 lg:h-fit drop-shadow-3xl-md place-items-center text-input-area-text sm:col-span-6 lg:col-span-7 rounded-2xl">
+            <div className="z-10 grid justify-center lg:h-full h-fit w-[90vw] mx-auto rounded-3xl grid-cols-12 gap-6 px-5 drop-shadow-3xl-md bg-new-bg-color lg:px-24 flex-center place-items-center">
+                <div className="grid w-full col-span-12 p-4 text-center bg-white h-fit lg:mt-0 mt-14 mb-9 lg:h-fit drop-shadow-3xl-md place-items-center text-input-area-text sm:col-span-6 lg:col-span-7 rounded-2xl">
                     <img 
                         className="w-full max-w-xl transition rounded-2xl max-h-fit hover:border-gray-400 focus:outline-none"
                         src="/classified2.png" 
