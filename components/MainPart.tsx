@@ -117,7 +117,7 @@ const MainPart = () => {
                         height={75}
                     />
                     <h3 className="mt-3 text-lg font-bold text-center">Image Uploaded</h3>
-                    <p className="py-4 font-light text-center">Let's start processing your input image!</p>
+                    <p className="py-4 font-light text-center">Let&apos;s start processing your input image!</p>
                     <div className="justify-center gap-6 border-2 border-black modal-action">
                         <label 
                             htmlFor="my_modal_2"
