@@ -1,11 +1,24 @@
 import { AiOutlineGithub } from "react-icons/ai";
 import Link from "next/link";
+import Image from 'next/image'
 
 const NavBar = () => {
     return (
         <div className="z-20 h-10 bg-white navbar">
             <div className="flex-1">
-                <Link href="/" className="text-xl text-black normal-case btn btn-ghost"><img className="mr-2 w-9 h-9" src="Logo.svg" /> <span className="font-medium">Mo</span><span className="font-semibold">lar</span><span className="font-bold">Sense</span> </Link>
+                <Link href="/" className="text-xl text-black normal-case btn btn-ghost">
+                    <Image
+                        src="Logo.svg"
+                        className="mr-2 w-9 h-9"
+                        alt="Molarsense Logo"
+                        width={800}
+                        height={500}
+                    />
+                    {/* <img className="mr-2 w-9 h-9" src="Logo.svg" />  */}
+                    <span className="font-medium">Mo</span>
+                    <span className="font-semibold">lar</span>
+                    <span className="font-bold">Sense</span> 
+                </Link>
             </div>
             <div className="z-40 flex-none">
                 <ul className="px-1 menu menu-horizontal">
